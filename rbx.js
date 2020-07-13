@@ -5,7 +5,7 @@ module.exports.buyAsset = (shirt, cookie, price, proxy) => {
     return new Promise((res, rej) => {
       let req = request.defaults({ timeout: 10000, proxy: `http://${proxy}` });
       req.get(
-        `https://www.roblox.com/catalog/${shirt}`,
+        `https://www.roblox.com/game-pass/${shirt}`,
         {
           headers: {
             Cookie: `.ROBLOSECURITY=${cookie}`,
